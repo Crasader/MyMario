@@ -211,7 +211,8 @@ void LayerModel::collision(float)
 				it = _roles.erase(it);
 				continue;
 			}
-			else if (result == Role::CollisionResult::FINAL)
+
+            else if (result == Role::CollisionResult::FINAL)
 			{
 				++util._mapIndex;
 				unschedule(schedule_selector(LayerModel::collision));

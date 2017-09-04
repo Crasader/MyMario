@@ -37,12 +37,12 @@ bool LayerStart::init()
 			
 			// startGame();
 			// 010. 如果不理解createTransitionByLayer，没关系，看011
-//			scene = createTransitionByLayer(TransitionCrossFade, LayerSelectMap::create(), 2.0f);
-//			Director::getInstance()->replaceScene(scene);
+			scene = createTransitionByLayer(TransitionCrossFade, LayerSelectMap::create(), 2.0f);
+			Director::getInstance()->replaceScene(scene);
                 
                 Util::getInstance()._mapIndex = 1;
-                //Scene* scene = createTransitionByLayer(TransitionPageTurn, LayerProgress::create(), 1.0f, true);
-                Director::getInstance()->replaceScene(Util::getInstance().createScene(LayerProgress::create()));
+//                Scene* scene = createTransitionByLayer(TransitionPageTurn, LayerProgress::create(), 1.0f, true);
+//                Director::getInstance()->replaceScene(Util::getInstance().createScene(LayerProgress::create()));
 			break;
 		default:
 			break;

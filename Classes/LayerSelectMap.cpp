@@ -50,7 +50,8 @@ void LayerSelectMap::initTouch()
 	//	ev->onTouchMoved = CC_CALLBACK_2(LayerSelectMap::TouchMoved, this);
 	ev->onTouchEnded = CC_CALLBACK_2(LayerSelectMap::TouchEnded, this);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(ev, this);
-//    setTouchEnabled(true);
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(ev->clone(), _view->getContainer());
+    setTouchEnabled(true);
 }
 void LayerSelectMap::initBackMenu()
 {
